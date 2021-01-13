@@ -16,37 +16,37 @@ module.exports = {
 
     // find all books saved in db
     findAll: (req, res) => {
-        db.Book
+        db.books
             .find(req.query)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err))
     },
     findById: (req, res) => {
-        db.Book
+        db.books
             .findById(req.params.id)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err))
     },
     // used to save a book to the db
     save: (req, res) => {
-        db.Book
+        db.books
             .create(req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err))
     },
     update: (req, res) => {
-        db.Book
+        db.books
             .findByIdAndUpdate({ _id: req.params.id }, req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err))
     },
     // used to delete a book from the db
     remove: (req, res) => {
-        db.Book
+        db.books
             .findById({ _id: req.params.id })
             .then(dbModel => dbModel.remove())
             .then(dbModel => res.json(dbModel))
-            .catch(err => res.status(422).json(err))
+            .catch(err => res.status(404).json(err))
     },
 
 };
