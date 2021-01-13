@@ -1,7 +1,8 @@
+  
 {
-  "name": "google-books-search",
+  "name": "googlebooks",
   "version": "1.0.0",
-  "description": "google-books-search",
+  "description": "Google Books Search",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
@@ -12,18 +13,16 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Mark Faraj",
+  "license": "MIT",
   "devDependencies": {
-    "node" : "v14.15.0",
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.7"
   },
   "dependencies": {
-    "node" : "v14.15.0",
-    "axios": "^0.19.0",
     "express": "^4.16.3",
-    "if-env": "^1.0.4",
-    "mongoose": "^5.6.9"
+
+    "mongoose": "^5.4.1",
+    "react-router-dom": "^4.3.1"
   }
 }
