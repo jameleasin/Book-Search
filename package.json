@@ -2,6 +2,7 @@
   "name": "book-search",
   "version": "1.0.0",
   "main": "server.js",
+  "homepage":"https://jameleasin.github.io/Book-Search/",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
